@@ -1,7 +1,7 @@
 @import url(https://fonts.google.com/specimen/Spartan);
 /* Variables*/
 :root{
-    /* theme 1*https://fonts.google.com/specimen/Spartan/
+    /* theme 1*/
     /* background*/
     --very-dark-blue-background: hsl(222, 26%, 31%);
     --very-dark-blue-keypad-background: hsl(223, 31%, 20%);
@@ -10,6 +10,8 @@
     /* keys*/
     --dark-blue-key-background: hsl(225, 21%, 49%);
     --dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --red-key-background: hsl(6, 63%, 50%);
+    --dark-red-key-shadow: hsl(6, 70%, 34%);
     --grayish-orange-key-background: hsl(30, 25%, 89%);
     --grayish-orange-key-shadow: hsl(28, 16%, 65%);
     /*/keys*/
@@ -56,4 +58,107 @@
 html {
     max-width: 1440px;
     font-family: "Spartan";
+    background-color: var(--very-dark-blue-background);
+    color: white;
+    box-sizing: border-box;
 }
+
+/*main container*/
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* calc main body*/
+.calc-main{
+    /* grid stuff*/
+    display: grid;
+    grid-template-columns: 5.6em 5.6em 5.6em 5.6em;
+    grid-template-rows: repeat(4, auto) 50px;
+    grid-gap: 1em ;
+    /* /grid stuff*/
+    padding: 1em;
+    background: var(--very-dark-blue-screen-background);
+    border-radius: 10px;
+    margin: 1em 0;
+}
+
+/* calc elements*/
+button{
+    width: 85px;
+    height: 56px;
+    border-radius: 7px;
+    border: none;
+    font-weight: bold;
+    color: var(--dark-grayish-blue-text);
+    font-size: 2.2em;
+    box-shadow: 0 4px 0 0 var(--grayish-orange-key-shadow); 
+    background: var(--grayish-orange-key-background);
+}
+
+
+
+.del{
+    background: var(--dark-blue-key-background);
+    border: none;
+    border-radius: 7px;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 0 0 var(--dark-blue-key-shadow); 
+}
+
+.reset{
+    border-radius: 7px;
+    grid-column: 1 / 3; 
+    background: var(--dark-blue-key-background);
+    border: none;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 0 0 var(--dark-blue-key-shadow); 
+    width: 100%
+}
+
+.equal{
+    grid-column: 3 / 5;
+    border-radius: 7px;
+    background: var(--red-key-background);
+    border: none;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 0 0 var(--dark-red-key-shadow); 
+    width: 100%;
+}
+
+/* header */
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 27em;
+}
+
+
+.header-theme{
+    margin-left: 15em;
+    margin-top: 2.5em;
+}
+
+.header-num{
+    margin: 0 .5em;
+}
+
+/* output*/
+#output{
+    width: 435px;
+    height: 80px;
+    border-radius: 10px;
+    border: none;
+    background: var(--very-dark-blue-screen-background);
+    text-align: right;
+    font-size: 2em;
+    color: white;
+}
+

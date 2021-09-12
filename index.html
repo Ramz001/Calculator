@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
@@ -15,12 +17,49 @@
   </style>
 </head>
 <body>
+  <div class="main-container">
+    <div class="header">
+      <h2 class="header-text">calc</h2>
+      <div class="header-theme">THEME</div>
+      <div class="header-num">1</div>
+      <div class="header-num">2</div>
+      <div class="header-num">3</div>
+    </div>
+
+    <div class="calc-top">
+      <input type="text" id="output">
+    </div>
+
+    <div class="calc-main">
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button class="del" data-delete>DEL</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-operation>/</button>
+      <button data-operation>x</button>
+      <button class="reset" data-all-reset>RESET</button>
+      <button class="equal" data-equal>=</button>
+
+    </div>
 
 
-  
+  </div><!--main-container-->
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Ramz001" target="_blank">Ramz001</a>.
   </div>
+<!--JavaScript-->
+<script src="script.js"></script>
 </body>
 </html>
