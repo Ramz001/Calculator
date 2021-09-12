@@ -51,5 +51,9 @@
     --light-yellow: hsl(52, 100%, 62%);
     --very-dark-blue: hsl(198, 20%, 13%);
     /* /text*/
+}
+
+html {
+    max-width: 1440px;
     font-family: "Spartan";
 }
