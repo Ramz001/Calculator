@@ -30,7 +30,7 @@ input[type="number"] {
     }
     .button-container{
         @apply grid grid-cols-4 grid-rows-5 bg-theme1-very-dark-desaturated-blue-toggle
-            gap-3 p-4  rounded-lg 
+            gap-4 p-4  rounded-lg 
     }
     .btn{
         @apply font-semibold rounded-md pb-1 pt-2 
