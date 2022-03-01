@@ -3,24 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="public/tailwind.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Calculator app</title>
+  <title>Calculator</title>
 
+<style>
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 100%;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: hsl(6, 63%, 50%);
+}
+</style>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</head>
+<body class="body">
+
+  <main class="self-center md:w-[60%] lg:w-[40%] my-12 w-[86%]">
+    <div class="calc-header"> 
+      <h1 class="font-semibold text-3xl">calc</h1>
+      <div class="flex gap-4">
+        <h3 class="text-sm self-center font-semibold">theme</h3>
+        <div class="flex flex-col">
+          <div class="flex text-sm justify-between w-20">
+            <p class="text-sm">1</p>
+            <p class="text-sm">2</p>
+            <p class="text-sm">3</p>
+          </div>
+          <input type="range" min="1" max="3" 
+          class="w-20 rounded-full cursor-pointer bg-theme1-very-dark-desaturated-blue-toggle 
+          appearance-none py-1">
+        </div>
+      </div>
+    </div>  
+
+    <div>
+      <input type="number" name="display" id="display" class="display">
+    </div>
+
+    <div class="button-container">
+      <button class="btn-num btn">7</button>
+      <button class="btn-num btn">8</button>
+      <button class="btn-num btn">9</button>
+      <button class="btn btn-blue">DEL</button>
+      <button class="btn-num btn">4</button>
+      <button class="btn-num btn">5</button>
+      <button class="btn-num btn">6</button>
+      <button class="btn btn-num">+</button>
+      <button class="btn-num btn">1</button>
+      <button class="btn-num btn">2</button>
+      <button class="btn-num btn">3</button>
+      <button class="btn btn-num">-</button>
+      <button class="btn btn-num">.</button>
+      <button class="btn-num btn">0</button>
+      <button class="btn btn-num">/</button>
+      <button class="btn btn-num">x</button>
+      <button class="col-span-2 btn btn-blue">RESET</button>
+      <button class="col-span-2 btn bg-theme1-red text-white 
+      border-b-4 border-theme1-dark-red">=</button>
+    </div>
+  </main>
+  
+  <footer class="text-center text-xs mt-12 mb-4 text-white">
+    Challenge by
+     <a href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank" class="text-blue-400">
+      Frontend Mentor
+    </a>. 
+    Coded by <a href="https://github.com/Ramz001"
+     class="text-blue-400 underline underline-offset-2">Ramz</a>.
+  </footer>
+
+  <script src="src/script.js"></script>
 </body>
 </html>

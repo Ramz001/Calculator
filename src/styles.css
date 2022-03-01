@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+
+input[type="number"] {
+    -moz-appearance: textfield; 
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .body{
+        @apply flex md:justify-center flex-col text-4xl font-spartan 
+            bg-theme1-very-dark-desaturated-blue 
+    }
+    .display{
+        @apply w-[100%] my-4 block bg-theme1-very-dark-desaturated-blue-screen
+        h-20 text-white text-right px-3 rounded-md
+    }
+    .calc-header{
+        @apply flex justify-between items-center text-white
+    }
+    .button-container{
+        @apply grid grid-cols-4 grid-rows-5 bg-theme1-very-dark-desaturated-blue-toggle
+            gap-3 p-4  rounded-lg 
+    }
+    .btn{
+        @apply font-semibold rounded-md pb-1 pt-2 
+    }
+    .btn-num{
+        @apply bg-theme1-light-grayish-orange text-theme1-very-dark-grayish-blue
+            border-b-4 border-theme1-grayish-orange 
+    }
+    .btn-blue{
+        @apply bg-theme1-desaturated-dark-blue border-b-4 
+            border-theme1-desaturated-dark-blue-shadow text-white text-xl
+    }
+}
