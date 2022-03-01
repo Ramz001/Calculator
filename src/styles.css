@@ -10,8 +10,6 @@ input[type="number"] {
     -moz-appearance: textfield; 
 }
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,7 +21,7 @@ input[type="number"] {
     }
     .display{
         @apply w-[100%] my-4 block bg-theme1-very-dark-desaturated-blue-screen
-        h-20 text-white text-right px-3 rounded-md
+        h-20 text-white text-right px-3 rounded-md hover:outline-none outline-none
     }
     .calc-header{
         @apply flex justify-between items-center text-white
@@ -33,7 +31,7 @@ input[type="number"] {
             gap-4 p-4  rounded-lg 
     }
     .btn{
-        @apply font-semibold rounded-md pb-1 pt-2 
+        @apply font-semibold rounded-md pb-1 pt-2 hover:bg-opacity-75
     }
     .btn-num{
         @apply bg-theme1-light-grayish-orange text-theme1-very-dark-grayish-blue

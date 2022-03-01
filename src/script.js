@@ -18,7 +18,7 @@ numbers.forEach(num=>{
 })
 
 resetBtn.addEventListener("click",()=>{
-    display.value = 0
+    display.value = ""
     buffer = ''
 })
 
