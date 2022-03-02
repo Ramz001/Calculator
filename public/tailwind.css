@@ -707,8 +707,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
 }
 
-.font-bold{
-  font-weight: 700;
+.font-extrabold{
+  font-weight: 800;
 }
 
 .font-semibold{
