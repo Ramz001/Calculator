@@ -81,7 +81,7 @@
     @apply grid grid-cols-4 grid-rows-5 bg-skin-keypad gap-4 p-4  rounded-lg;
   }
   .btn {
-    @apply font-semibold rounded-md pb-1 pt-2 hover:opacity-80 transition duration-150 ease-out;
+    @apply font-bold rounded-md pb-1 pt-2 hover:opacity-80 transition duration-150 ease-out;
   }
   .btn-num {
     @apply bg-skin-key-base shadow-key-base text-skin-key-base;
