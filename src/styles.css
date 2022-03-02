@@ -1,44 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-} 
+@layer base {
+  :root {
+    --color-fill-base: hsl(222, 26%, 31%);
+    --color-fill-keypad: hsl(223, 31%, 20%);
+    --color-fill-screen: hsl(224, 36%, 15%);
 
-input[type="number"] {
-    -moz-appearance: textfield; 
+    --color-fill-key-accent-1: hsl(225, 21%, 49%);
+    --color-shadow-key-accent-1: hsl(224, 28%, 35%);
+
+    --color-fill-key-accent-2: hsl(6, 63%, 50%);
+    --color-shadow-key-accent-2: hsl(6, 70%, 34%);
+
+    --color-fill-key-base: hsl(30, 25%, 89%);
+    --color-shadow-key-base: hsl(28, 16%, 65%);
+
+    --color-text-key-base: hsl(221, 14%, 31%);
+    --color-text-key-accent-1: hsl(0, 0%, 100%);
+    --color-text-key-accent-2: hsl(0, 0%, 100%);
+    --color-text-screen: hsl(0, 0%, 100%);
+  }
+
+  .theme-2 {
+    --color-fill-base: hsl(0, 0%, 90%);
+    --color-fill-keypad: hsl(0, 5%, 81%);
+    --color-fill-screen: hsl(0, 0%, 93%);
+
+    --color-fill-key-accent-1: hsl(185, 42%, 37%);
+    --color-shadow-key-accent-1: hsl(185, 58%, 25%);
+
+    --color-fill-key-accent-2: hsl(25, 98%, 40%);
+    --color-shadow-key-accent-2: hsl(25, 99%, 27%);
+
+    --color-fill-key-base: hsl(45, 7%, 89%);
+    --color-shadow-key-base: hsl(35, 11%, 61%);
+
+    --color-text-key-base: hsl(60, 10%, 19%);
+    --color-text-key-accent-1: hsl(0, 0%, 100%);
+    --color-text-key-accent-2: hsl(0, 0%, 100%);
+    --color-text-screen: hsl(60, 10%, 19%);
+  }
+
+  .theme-3 {
+    --color-fill-base: hsl(268, 75%, 9%);
+    --color-fill-keypad: hsl(268, 71%, 12%);
+    --color-fill-screen: hsl(268, 71%, 12%);
+
+    --color-fill-key-accent-1: hsl(281, 89%, 26%);
+    --color-shadow-key-accent-1: hsl(285, 91%, 52%);
+
+    --color-fill-key-accent-2: hsl(176, 100%, 44%);
+    --color-shadow-key-accent-2: hsl(177, 92%, 70%);
+
+    --color-fill-key-base: hsl(268, 47%, 21%);
+    --color-shadow-key-base: hsl(290, 70%, 36%);
+
+    --color-text-key-base: hsl(52, 100%, 62%);
+    --color-text-key-accent-1: hsl(0, 0%, 100%);
+    --color-text-key-accent-2: hsl(198, 20%, 13%);
+    --color-text-screen: hsl(52, 100%, 62%);
+  }
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .body{
-        @apply flex md:justify-center flex-col text-4xl font-spartan 
-            bg-theme1-very-dark-desaturated-blue 
-    }
-    .display{
-        @apply w-[100%] my-4 block bg-theme1-very-dark-desaturated-blue-screen
-        h-20 text-white text-right px-3 rounded-md hover:outline-none outline-none
-    }
-    .calc-header{
-        @apply flex justify-between items-center text-white
-    }
-    .button-container{
-        @apply grid grid-cols-4 grid-rows-5 bg-theme1-very-dark-desaturated-blue-toggle
-            gap-4 p-4  rounded-lg 
-    }
-    .btn{
-        @apply font-semibold rounded-md pb-1 pt-2 hover:bg-opacity-75
-    }
-    .btn-num{
-        @apply bg-theme1-light-grayish-orange text-theme1-very-dark-grayish-blue
-            border-b-4 border-theme1-grayish-orange 
-    }
-    .btn-blue{
-        @apply bg-theme1-desaturated-dark-blue border-b-4 
-            border-theme1-desaturated-dark-blue-shadow text-white text-xl
-    }
+@layer components {
+  .body {
+    @apply flex md:justify-center flex-col text-4xl font-spartan bg-skin-base  transition-all;
+  }
+  .display {
+    @apply w-[100%] my-4 block bg-skin-screen
+        h-20 text-white text-right px-3 rounded-md hover:outline-none outline-none;
+  }
+  .calc-header {
+    @apply flex justify-between items-center text-skin-screen;
+  }
+  .button-container {
+    @apply grid grid-cols-4 grid-rows-5 bg-skin-keypad gap-4 p-4  rounded-lg;
+  }
+  .btn {
+    @apply font-semibold rounded-md pb-1 pt-2 hover:opacity-80 transition duration-150 ease-out;
+  }
+  .btn-num {
+    @apply bg-skin-key-base shadow-key-base text-skin-key-base;
+  }
+  .btn-blue {
+    @apply bg-skin-key-accent-1 text-skin-key-accent-1 shadow-key-accent-1
+            text-white text-xl uppercase;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
