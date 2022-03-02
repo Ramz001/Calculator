@@ -43,19 +43,22 @@
               <p class="text-sm">2</p>
               <p class="text-sm">3</p>
             </div>
-            <input
-              id="range"
-              type="range"
-              min="1"
-              max="3"
-              data-range
-              class="w-20 h-7 rounded-full cursor-pointer bg-skin-keypad appearance-none p-1"
-            />
+            <label for="range">
+              <input
+                id="range"
+                type="range"
+                min="1"
+                max="3"
+                data-range
+                class="w-20 h-7 rounded-full cursor-pointer bg-skin-keypad
+                  appearance-none p-1"
+            /></label>
           </div>
         </div>
       </div>
 
-      <div>
+      <label for="display">
+
         <input
           type="text"
           name="display"
@@ -63,7 +66,7 @@
           class="display"
           readonly
         />
-      </div>
+      </label>
 
       <div class="button-container">
         <button class="btn-num btn" data-number="7">7</button>
@@ -110,8 +113,6 @@
       >.
     </footer>
 
-    <label for="range"></label>
-    <label for="display"></label>
 
 
     <script src="src/script.js"></script>
