@@ -16,11 +16,17 @@
     <title>Calculator</title>
 
     <style>
-      input[type="range"]::-webkit-slider-thumb {
+      input[type="range"]::-webkit-slider-thumb{
         -webkit-appearance: none;
         border-radius: 100%;
         width: 1.1rem;
         height: 1.1rem;
+        background: var(--color-fill-key-accent-2);
+      }
+      input[type="range"]::-moz-range-thumb{
+        border-radius: 100%;
+        width: 1rem;
+        height: 1rem;
         background: var(--color-fill-key-accent-2);
       }
     </style>
@@ -42,7 +48,7 @@
               min="1"
               max="3"
               data-range
-              class="w-20 rounded-full cursor-pointer bg-skin-keypad appearance-none p-1"
+              class="w-20 h-7 rounded-full cursor-pointer bg-skin-keypad appearance-none p-1"
             />
           </div>
         </div>
