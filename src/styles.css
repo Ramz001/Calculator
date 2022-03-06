@@ -68,17 +68,17 @@
 
 @layer components {
   .body {
-    @apply flex md:justify-center flex-col text-4xl font-spartan bg-skin-base  transition-all;
+    @apply flex md:justify-center flex-col text-4xl font-spartan bg-skin-base transition-all;
   }
   .display {
-    @apply w-[100%] my-4 block bg-skin-screen
-        h-20 text-white text-right px-3 rounded-md hover:outline-none outline-none;
+    @apply w-[100%] my-4 block bg-skin-screen h-20 text-skin-screen text-right px-3 
+      rounded-md hover:outline-none outline-none;
   }
   .calc-header {
     @apply flex justify-between items-center text-skin-screen;
   }
   .button-container {
-    @apply grid grid-cols-4 grid-rows-5 bg-skin-keypad gap-4 p-4  rounded-lg;
+    @apply grid grid-cols-4 grid-rows-5 bg-skin-keypad gap-4 p-4 text-skin-screen rounded-lg;
   }
   .btn {
     @apply font-bold rounded-md pb-1 pt-2 hover:opacity-80 transition duration-150 ease-out;
@@ -88,7 +88,7 @@
   }
   .btn-blue {
     @apply bg-skin-key-accent-1 text-skin-key-accent-1 shadow-key-accent-1
-            text-white text-xl uppercase;
+      text-white text-xl uppercase;
   }
 }
 
